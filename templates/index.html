@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask Docker Animation</title>
+    <title style="font-size: 2rem;">Flask Docker Animation</title>
     <style>
         body {
             margin: 0;
@@ -12,16 +12,22 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f0f0;
+            background: linear-gradient(45deg, #ff00cc, #3333ff);
             overflow: hidden;
         }
 
         h1 {
             font-family: Arial, sans-serif;
-            font-size: 3rem;
-            color: #333;
+            font-size: 4rem;
+            color: #fff;
             position: relative;
-            animation: float 5s infinite;
+            animation: float 5s infinite, colorChange 10s infinite;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease-in-out;
         }
 
         @keyframes float {
@@ -35,9 +41,21 @@
                 transform: translateY(0);
             }
         }
+
+        @keyframes colorChange {
+            0% {
+                color: #fff;
+            }
+            50% {
+                color: #ffcc00;
+            }
+            100% {
+                color: #fff;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>This is a Flask App containerized with Docker By Bhavesh</h1>
+    <h1><span style="font-size: 1.5rem;">This is a</span><br><b>Flask App containerized with Docker</b><br><span style="font-size: 1.2rem;">By Bhavesh</span></h1>
 </body>
 </html>
